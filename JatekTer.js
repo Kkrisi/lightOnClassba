@@ -8,9 +8,11 @@ export default class JatekTer {
 
     constructor(lista) {
         this.#lista = lista;
+        let szuloElem = $(".jatekter")
+        szuloElem.empty()
 
         this.#lista.forEach((element,index) => {
-            new Lampa(element, index, $(".jatekter"));
+            new Lampa(element, index, szuloElem);
         })
     }
 }

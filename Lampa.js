@@ -14,6 +14,14 @@ export default class Lampa {
         this.#megjelenit()
         this.#divElem = this.#szuloElem.children("div:last-child")
         this.#szinBeallit()
+        this.#esemenykezelo()
+    }
+
+
+    #esemenykezelo(){
+        this.#divElem.on("click", ()=>{
+            console.log(this.#id)
+        })
     }
 
     #megjelenit(){
